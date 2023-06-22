@@ -14,8 +14,8 @@ var rightConfig = `
 {
 	"port": ":3000",
 	"stripe": {
-			"publisher": "key",
-			"secret": "key"
+			"publisher": "pk",
+			"secret": "sk"
 	},
 	"database": {
 			"file": "testing.db"
