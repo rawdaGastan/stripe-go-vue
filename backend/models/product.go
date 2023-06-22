@@ -11,7 +11,7 @@ const (
 
 // Product struct for products.
 type Product struct {
-	ID       string   `json:"id"`
+	ID       int      `json:"id"`
 	Name     string   `json:"name"`
 	Price    int64    `json:"price"`
 	PriceID  string   `json:"price_id"`

@@ -45,7 +45,7 @@ func (d *DB) CreateProduct(p *Product) error {
 
 	paramsPrice := &stripe.PriceParams{
 		Product:    stripe.String(prod.ID),
-		UnitAmount: stripe.Int64(2000),
+		UnitAmount: stripe.Int64(p.Price),
 		Currency:   stripe.String(string(stripe.CurrencyUSD)),
 	}
 
@@ -68,19 +68,19 @@ func (d *DB) GetProduct(id int64) (Product, error) {
 // ListProducts returns all products
 func (d *DB) ListProducts() ([]Product, error) {
 	var products []Product
-	err := d.db.Where("admin = true and verified = true").Find(&products).Error
+	err := d.db.Find(&products).Error
 	return products, err
 }
 
 // BuyProduct adds amount bought of a product
-func (d *DB) BuyProduct(id uint64, amount int64) error {
+func (d *DB) BuyProduct(id int64, amount int64) error {
 	var res Product
 	result := d.db.Model(&res).Where("id = ?", id).Set("amount = amount + ?", amount)
 	return result.Error
 }
 
 // SellProduct subtracts amount sold from a product
-func (d *DB) SellProduct(id uint64, amount int64) error {
+func (d *DB) SellProduct(id int64, amount int64) error {
 	var res Product
 	result := d.db.Model(&res).Where("id = ?", id).Set("amount = amount - ?", amount)
 	return result.Error

@@ -15,6 +15,7 @@ import (
 	"github.com/rawdaGastan/stripe-go-vue/middlewares"
 	"github.com/rawdaGastan/stripe-go-vue/models"
 	"github.com/rs/zerolog/log"
+	"github.com/stripe/stripe-go/v74"
 )
 
 // App for all dependencies of backend server
@@ -48,6 +49,8 @@ func NewApp(ctx context.Context, configFile string) (app *App, err error) {
 
 // Start starts the app
 func (a *App) Start(ctx context.Context) (err error) {
+	stripe.Key = a.config.StripeKeys.Secret
+
 	a.registerHandlers()
 
 	log.Info().Msgf("Server is listening on port %s", a.config.Port)
@@ -84,6 +87,9 @@ func (a *App) registerHandlers() {
 	versionRouter := r.PathPrefix("/" + a.config.Version).Subrouter()
 
 	versionRouter.HandleFunc("/checkout", WrapFunc(a.createCheckoutSession)).Methods("POST", "OPTIONS")
+	versionRouter.HandleFunc("/sell", WrapFunc(a.sellProduct)).Methods("PUT", "OPTIONS")
+	versionRouter.HandleFunc("/create", WrapFunc(a.createProduct)).Methods("POST", "OPTIONS")
+	versionRouter.HandleFunc("/products", WrapFunc(a.getProducts)).Methods("GET", "OPTIONS")
 
 	// middlewares
 	r.Use(middlewares.EnableCors)

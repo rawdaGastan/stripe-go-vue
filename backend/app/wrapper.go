@@ -111,6 +111,11 @@ func Ok() Response {
 	return genericResponse{status: http.StatusOK}
 }
 
+// Other return a Other response
+func Other() Response {
+	return genericResponse{status: http.StatusSeeOther}
+}
+
 // Error generic error response
 func Error(err error, code ...int) Response {
 	status := http.StatusInternalServerError
