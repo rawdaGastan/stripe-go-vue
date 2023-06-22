@@ -28,10 +28,6 @@ To run backend and frontend:
 docker compose up
 ```
 
-## Manual testing
-
-You can test using the following [cards](https://stripe.com/docs/testing#cards)
-
 ### Configuration
 
 Before building or running backend image create `config.json` in `server` dir.
@@ -51,6 +47,10 @@ example `config.json`:
     "version": "v1"
 }
 ```
+
+## Manual testing
+
+You can test stripe using the following [cards](https://stripe.com/docs/testing#cards)
 
 ## Frontend
 
