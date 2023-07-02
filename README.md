@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cd6e18aac6be404ab89ec160b4b36671)](https://www.codacy.com/gh/rawdaGastan/stripe-go-vue/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rawdaGastan/stripe-go-vue&amp;utm_campaign=Badge_Grade) [![Testing](https://github.com/rawdaGastan/stripe-go-vue/actions/workflows/golint.yml/badge.svg?branch=development)](https://github.com/rawdaGastan/stripe-go-vue/actions/workflows/golint.yml) [![Testing](https://github.com/rawdaGastan/stripe-go-vue/actions/workflows/vuelint.yml/badge.svg?branch=development)](https://github.com/rawdaGastan/stripe-go-vue/actions/workflows/vuelint.yml)
 
-stripe-go-vue aims to help students deploy their projects on Threefold Grid.
+stripe-go-vue is an stripe example in go and vue.
 
 ## Requirements
 
