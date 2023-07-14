@@ -7,7 +7,7 @@ require (
 	github.com/rs/zerolog v1.29.1
 	github.com/spf13/cobra v1.7.0
 	github.com/stretchr/testify v1.8.4
-	github.com/stripe/stripe-go/v74 v74.25.0
+	github.com/stripe/stripe-go/v74 v74.26.0
 	gopkg.in/validator.v2 v2.0.1
 	gorm.io/driver/sqlite v1.5.2
 	gorm.io/gorm v1.25.2
