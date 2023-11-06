@@ -3,7 +3,7 @@ module github.com/rawdaGastan/stripe-go-vue
 go 1.19
 
 require (
-	github.com/gorilla/mux v1.8.0
+	github.com/gorilla/mux v1.8.1
 	github.com/rs/zerolog v1.30.0
 	github.com/spf13/cobra v1.7.0
 	github.com/stretchr/testify v1.8.4
