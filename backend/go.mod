@@ -10,7 +10,7 @@ require (
 	github.com/stripe/stripe-go/v74 v74.30.0
 	gopkg.in/validator.v2 v2.0.1
 	gorm.io/driver/sqlite v1.5.5
-	gorm.io/gorm v1.25.7-0.20240204074919-46816ad31dde
+	gorm.io/gorm v1.25.12
 )
 
 require (
@@ -27,5 +27,6 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	golang.org/x/net v0.11.0 // indirect
 	golang.org/x/sys v0.9.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
