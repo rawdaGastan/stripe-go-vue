@@ -13,7 +13,7 @@
         "axios": "^1.5.0",
         "core-js": "^3.32.1",
         "roboto-fontface": "*",
-        "vue": "^3.2.0",
+        "vue": "^3.5.13",
         "vue-router": "^4.5.0",
         "vuetify": "^3.4.0",
         "webfontloader": "^1.0.0"
